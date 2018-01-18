@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Registrar</title>
+    <title>JUEGO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,11 +14,106 @@
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label>Nivel</label>
+                    <select id="nivel" class="form-control">
+                        <option value="1">Fácil</option>
+                        <option value="2">Medio</option>
+                        <option value="3">Difícil</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+        </div>
+        <div class="row text-center">
+            <button type="submit" class="btn btn-primary" onclick="iniciar()">
+                <span class="fa fa-diamond"></span>&nbsp;Iniciar
+            </button>
+        </div>
+        <div style="width:100%; float:left; height:30px;"></div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="palabraEstadoActual" readonly>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                <div class="row text-center">
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('Q')">Q</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('W')">W</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('E')">E</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('R')">R</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('T')">T</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('Y')">Y</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('U')">U</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('I')">I</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('O')">O</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('P')">P</button>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>    
+        </div>
+        <div style="width:100%; float:left; height:10px;"></div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                <div class="row text-center">
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('A')">A</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('S')">S</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('D')">D</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('F')">F</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('G')">G</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('H')">H</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('J')">J</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('K')">K</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('L')">L</button>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>    
+        </div>
+        <div style="width:100%; float:left; height:10px;"></div>
+        <div class="row">
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6">
+                <div class="row text-center">
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('Z')">Z</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('X')">X</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('C')">C</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('V')">V</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('B')">B</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('N')">N</button>
+                    <button type="submit" class="btn btn-primary" onclick="ingresar('M')">M</button>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-3 col-lg-3">
+            </div>    
+        </div>
+    </div>
+    <div class="container">
         <div id="superior" class="col-xs-12 text-center">
             <div style="float:left; width:70px; height:10px;">
             </div>
             <div style="float:left; width:65px;">
-                <img width="100%" src="./arte/cabeza.png">
+                <img width="100%" id="cabeza" src="./arte/cabeza.png">
             </div>
         </div>
         <div id="medio" class="col-xs-12 text-center">
@@ -26,10 +121,10 @@
                 <img width="100%" id="brazo-izquierdo" src="./arte/brazoizquierdo.png">
             </div>
             <div style="float:left; width:91px;">
-                <img width="100%";id="tronco"src="./arte/tronco.png">
+                <img width="100%" id="tronco" src="./arte/tronco.png">
             </div>
             <div style="float:left; width:55px;">
-                <img width="100%";id="brazo-derecho"src="./arte/brazoderecho.png">
+                <img width="100%" id="brazo-derecho" src="./arte/brazoderecho.png">
             </div>
         </div>
         <div id="inferior" class="col-xs-12 text-center">
@@ -37,10 +132,10 @@
                 
             </div>
             <div style="float:left; width:37px;">
-                <img width="100%";id="pie-izquerdo"src="./arte/piedizquierdo.png">
+                <img width="100%" id="pie-izquierdo" src="./arte/piedizquierdo.png">
             </div>
             <div style="float:left; width:37px;">
-                <img width="100%";id="pie-derecho"src="./arte/piederecho.png">
+                <img width="100%" id="pie-derecho" src="./arte/piederecho.png">
             </div>
         </div>
     </div>
